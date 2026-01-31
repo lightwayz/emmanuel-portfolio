@@ -54,7 +54,13 @@ const projects = [
             "Small demo API: auth, roles guard, idempotent payment intent, verify flow with explicit unknown states.",
         impact: ["Demonstrates NestJS structure and security patterns"],
         tech: ["NestJS", "TypeScript", "JWT", "RBAC", "Testing-ready DI"],
-        links: [{ label: "GitHub (public demo repo)", href: links.github }],
+        links: [
+            {
+                label: "GitHub (NestJS demo repo)",
+                href: "https://github.com/lightwayz/nestjs-reliability-demo",
+            },
+        ],
+
         note:
             "Demo is intentionally generic and contains no business logic, secrets, or customer data.",
     },
@@ -507,6 +513,16 @@ export default function Page() {
                                 <span className="text-white/60">Location:</span> Lagos, Nigeria
                                 (Hybrid)
                             </p>
+                            <p className="md:col-span-2">
+                                <span className="text-white/60">Email:</span>{" "}
+                                <a
+                                    className="underline decoration-white/30 underline-offset-4 hover:text-white"
+                                    href="mailto:emmadouabs@gmail.com"
+                                >
+                                    emmadouabs@gmail.com
+                                </a>
+                            </p>
+
                             <p className="md:col-span-2">
                                 <span className="text-white/60">LinkedIn:</span>{" "}
                                 <a
