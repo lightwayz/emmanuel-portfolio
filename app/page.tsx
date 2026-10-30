@@ -15,6 +15,22 @@ const links = {
 
 const projects = [
     {
+        name: "EnergyWallet Ticket Centre — Payments & Ticketing",
+        summary: "Production event ticketing with Paystack checkout, Firebase-backed purchase records, QR ticket verification and automated delivery.",
+        problem: "Event organizers need reliable ticket issuance, clear payment states and controlled check-in without exposing administrative operations.",
+        solution: "Built secure server-side payment verification, webhook-driven purchase workflows, signed ticket tokens, PDF ticket delivery and staff verification tools.",
+        impact: [
+            "Connected verified payments to ticket issuance and delivery",
+            "Supported event tiers, capacity checks and role-protected verification workflows",
+        ],
+        tech: ["Next.js", "TypeScript", "Firebase", "Paystack", "Webhooks", "PDF", "RBAC"],
+        links: [
+            { label: "Engineering case study", href: "/projects/energywallet-ticket-centre" },
+            { label: "Live Ticket Centre", href: "https://tickets.energywalletng.com" },
+        ],
+        note: "Production source is private to protect company IP and operational security. Technical walkthrough available on request.",
+    },
+    {
         name: "EnergyWalletNG — Transaction & Identity Platform",
         summary:
             "Secure, high-availability platform for payments, identity, and admin operations with traceability.",
