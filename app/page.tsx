@@ -240,7 +240,10 @@ export default function Page() {
                         <Badge>Next.js</Badge>
                         <Badge>Node.js</Badge>
                         <Badge>TypeScript</Badge>
-                        <Badge>NestJS-style architecture</Badge>
+                        <Badge>PostgreSQL</Badge>
+                        <Badge>Python / FastAPI</Badge>
+                        <Badge>Kubernetes / K3s</Badge>
+                        <Badge>RAG / Vector Search</Badge>
                         <Badge>Python (AI/Automation)</Badge>
                         <Badge>RBAC</Badge>
                         <Badge>CI/CD + DevSecOps</Badge>
@@ -310,11 +313,11 @@ export default function Page() {
                             },
                             {
                                 h: "Backend",
-                                p: "Node.js, TypeScript (NestJS-style modular architecture), Firebase, REST APIs, Python (AI/Automation)",
+                                p: "Node.js, TypeScript, Python/FastAPI, PostgreSQL, Firebase, REST APIs, payment webhooks",
                             },
                             {
                                 h: "Infrastructure",
-                                p: "Serverless, Vercel, Cloud Functions, environments & deployments",
+                                p: "Linux, Docker, Kubernetes/K3s, Ceph, GCP, Vercel, CI/CD and monitoring",
                             },
                             {
                                 h: "Security & Reliability",
@@ -322,7 +325,7 @@ export default function Page() {
                             },
                             {
                                 h: "Integrations",
-                                p: "Paystack, Termii (SMS/WhatsApp), external APIs",
+                                p: "Paystack, external APIs, LLM integration, RAG, Pinecone and Qdrant",
                                 span2: true,
                             },
                         ].map((card) => (
