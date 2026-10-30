@@ -466,13 +466,13 @@ export default function Page() {
                         <ul className="space-y-3 text-white/80">
                             <li>
                 <span className="font-medium text-white">
-                  CTO / Full-Stack Engineer
+                  CTO / Backend & AI Engineering Lead
                 </span>{" "}
                                 — EnergyWalletNG (Remote)
                             </li>
                             <li>
                 <span className="font-medium text-white">
-                  Full-Stack Developer
+                  Software Engineer
                 </span>{" "}
                                 — Mrock Entertainment / ATHF Kigali (Hybrid)
                             </li>
