@@ -31,6 +31,26 @@ const projects = [
         note: "Production source is private to protect company IP and operational security. Technical walkthrough available on request.",
     },
     {
+        name: "Six-Node Infrastructure — Failure-First Engineering",
+        summary: "Six-node Ubuntu platform with distributed storage, container orchestration and secure access for 18 developers.",
+        problem: "Deliver resilient shared infrastructure without unnecessary operational overhead.",
+        solution: "Implemented Linux, CephFS/RBD, Docker, K3s, Tailscale and Prometheus/Grafana with controlled failure testing.",
+        impact: ["Enabled secure remote access for 18 developers", "Documented short-duration continuity and the limits of severe node-loss testing"],
+        tech: ["Linux", "Ceph", "Docker", "K3s", "Tailscale", "Grafana"],
+        links: [{ label: "Infrastructure case study", href: "/projects/six-node-infrastructure" }],
+        note: "Failure observations are environment-specific and do not establish universal Ceph durability guarantees.",
+    },
+    {
+        name: "UNIC Law Firm — Secure Legal AI Workflows",
+        summary: "Legal operations platform with role-aware workflows and developing case-aware AI architecture.",
+        problem: "Legal teams require controlled case access and reviewable AI assistance.",
+        solution: "Implemented Next.js/Firebase access foundations and defined retrieval, human-review and delegated-security integration plans.",
+        impact: ["Established authenticated administrative workflows", "Designed roadmap for grounded retrieval and lawyer oversight"],
+        tech: ["Next.js", "Firebase", "RAG", "Pinecone", "Qdrant", "AI Security"],
+        links: [{ label: "Legal AI case study", href: "/projects/unic-legal-ai" }],
+        note: "Implemented foundations and planned integrations are clearly distinguished in the case study.",
+    },
+    {
         name: "EnergyWalletNG — Transaction & Identity Platform",
         summary:
             "Secure, high-availability platform for payments, identity, and admin operations with traceability.",
