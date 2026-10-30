@@ -4,9 +4,9 @@ import "./globals.css";
 import React from "react";
 
 export const metadata: Metadata = {
-    title: "Emmanuel Maduabuchi — Portfolio",
+    title: "Emmanuel Maduabuchi | Senior Backend & Platform Engineer",
     description:
-        "Full-Stack Systems Architect (High-Reliability Platforms). React, Node.js/TypeScript, NestJS-style architecture, Python.",
+        "Senior Backend & Platform Engineer specializing in production systems, payments, cloud infrastructure, security and applied AI.",
 };
 
 export default function RootLayout({

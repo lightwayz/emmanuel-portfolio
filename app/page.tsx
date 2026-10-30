@@ -8,12 +8,48 @@ import React from "react";
 // Keeping this file client-side for Framer Motion simplicity.
 
 const links = {
-    linkedin: "https://linkedin.com/in/emmanuel-maduabuchi-38354315a",
+    linkedin: "https://linkedin.com/in/emmanuel-maduabuchi-38354315",
     github: "https://github.com/lightwayz",
     cv: "/Emmanuel_Maduabuchi_CV.pdf",
 };
 
 const projects = [
+    {
+        name: "EnergyWallet Ticket Centre — Payments & Ticketing",
+        summary: "Production event ticketing with Paystack checkout, Firebase-backed purchase records, QR ticket verification and automated delivery.",
+        problem: "Event organizers need reliable ticket issuance, clear payment states and controlled check-in without exposing administrative operations.",
+        solution: "Built secure server-side payment verification, webhook-driven purchase workflows, signed ticket tokens, PDF ticket delivery and staff verification tools.",
+        impact: [
+            "Connected verified payments to ticket issuance and delivery",
+            "Supported event tiers, capacity checks and role-protected verification workflows",
+        ],
+        tech: ["Next.js", "TypeScript", "Firebase", "Paystack", "Webhooks", "PDF", "RBAC"],
+        links: [
+            { label: "Engineering case study", href: "/projects/energywallet-ticket-centre" },
+            { label: "Live Ticket Centre", href: "https://tickets.energywalletng.com" },
+        ],
+        note: "Production source is private to protect company IP and operational security. Technical walkthrough available on request.",
+    },
+    {
+        name: "Six-Node Infrastructure — Failure-First Engineering",
+        summary: "Six-node Ubuntu platform with distributed storage, container orchestration and secure access for 18 developers.",
+        problem: "Deliver resilient shared infrastructure without unnecessary operational overhead.",
+        solution: "Implemented Linux, CephFS/RBD, Docker, K3s, Tailscale and Prometheus/Grafana with controlled failure testing.",
+        impact: ["Enabled secure remote access for 18 developers", "Documented short-duration continuity and the limits of severe node-loss testing"],
+        tech: ["Linux", "Ceph", "Docker", "K3s", "Tailscale", "Grafana"],
+        links: [{ label: "Infrastructure case study", href: "/projects/six-node-infrastructure" }],
+        note: "Failure observations are environment-specific and do not establish universal Ceph durability guarantees.",
+    },
+    {
+        name: "UNIC Law Firm — Secure Legal AI Workflows",
+        summary: "Legal operations platform with role-aware workflows and developing case-aware AI architecture.",
+        problem: "Legal teams require controlled case access and reviewable AI assistance.",
+        solution: "Implemented Next.js/Firebase access foundations and defined retrieval, human-review and delegated-security integration plans.",
+        impact: ["Established authenticated administrative workflows", "Designed roadmap for grounded retrieval and lawyer oversight"],
+        tech: ["Next.js", "Firebase", "RAG", "Pinecone", "Qdrant", "AI Security"],
+        links: [{ label: "Legal AI case study", href: "/projects/unic-legal-ai" }],
+        note: "Implemented foundations and planned integrations are clearly distinguished in the case study.",
+    },
     {
         name: "EnergyWalletNG — Transaction & Identity Platform",
         summary:
@@ -164,18 +200,16 @@ export default function Page() {
                 >
                     <motion.div variants={fadeUp} className="flex flex-col gap-3">
                         <p className="text-xs uppercase tracking-widest text-white/50">
-                            Failure-First • Reliability • Security • Performance
+                            Production Systems • Cloud Infrastructure • Applied AI
                         </p>
                         <h1 className="text-4xl font-semibold leading-tight">
                             Emmanuel Maduabuchi
                         </h1>
                         <p className="text-white/80">
-                            Full-Stack Systems Architect (High-Reliability Platforms)
+                            Senior Backend & Platform Engineer
                         </p>
                         <p className="max-w-3xl text-white/70">
-                            I design and build secure, failure-aware web and backend systems
-                            for fintech, enterprise, and integration-heavy platforms — with
-                            observability, auditability, and real-world performance in mind.
+                            I engineer production backend platforms, payment systems, cloud infrastructure and applied AI workflows — with security, reliability and measurable business outcomes at the center.
                         </p>
                     </motion.div>
 
@@ -226,7 +260,10 @@ export default function Page() {
                         <Badge>Next.js</Badge>
                         <Badge>Node.js</Badge>
                         <Badge>TypeScript</Badge>
-                        <Badge>NestJS-style architecture</Badge>
+                        <Badge>PostgreSQL</Badge>
+                        <Badge>Python / FastAPI</Badge>
+                        <Badge>Kubernetes / K3s</Badge>
+                        <Badge>RAG / Vector Search</Badge>
                         <Badge>Python (AI/Automation)</Badge>
                         <Badge>RBAC</Badge>
                         <Badge>CI/CD + DevSecOps</Badge>
@@ -238,8 +275,8 @@ export default function Page() {
                 <MotionSection id="about">
                     <SectionTitle
                         kicker="About"
-                        title="Systems thinking, not just shipping features"
-                        desc="I work best in environments where downtime, security gaps, slow performance, or silent failures have real consequences. My approach is grounded in systems thinking (physics background) and reinforced by ownership of production deployments."
+                        title="Engineering production systems from architecture to operations"
+                        desc="I combine hands-on backend engineering with technical leadership across payments, cloud infrastructure, secure applications and AI-enabled workflows. I take responsibility for how systems behave after deployment—not just how they look in a demo."
                     />
                     <motion.div
                         variants={stagger}
@@ -279,8 +316,8 @@ export default function Page() {
                 <MotionSection id="skills">
                     <SectionTitle
                         kicker="Skills & Stack"
-                        title="Modern stack with reliability hooks"
-                        desc="Grouped for quick recruiter scanning."
+                        title="Backend, cloud and applied AI"
+                        desc="Core technologies I use to design, deliver and operate real systems."
                     />
                     <motion.div
                         variants={stagger}
@@ -296,11 +333,11 @@ export default function Page() {
                             },
                             {
                                 h: "Backend",
-                                p: "Node.js, TypeScript (NestJS-style modular architecture), Firebase, REST APIs, Python (AI/Automation)",
+                                p: "Node.js, TypeScript, Python/FastAPI, PostgreSQL, Firebase, REST APIs, payment webhooks",
                             },
                             {
                                 h: "Infrastructure",
-                                p: "Serverless, Vercel, Cloud Functions, environments & deployments",
+                                p: "Linux, Docker, Kubernetes/K3s, Ceph, GCP, Vercel, CI/CD and monitoring",
                             },
                             {
                                 h: "Security & Reliability",
@@ -308,7 +345,7 @@ export default function Page() {
                             },
                             {
                                 h: "Integrations",
-                                p: "Paystack, Termii (SMS/WhatsApp), external APIs",
+                                p: "Paystack, external APIs, LLM integration, RAG, Pinecone and Qdrant",
                                 span2: true,
                             },
                         ].map((card) => (
@@ -360,8 +397,8 @@ export default function Page() {
                 <MotionSection id="projects">
                     <SectionTitle
                         kicker="Portfolio"
-                        title="Featured projects"
-                        desc="Impact-focused summaries. Private work is available via walkthrough or temporary read-only access when appropriate."
+                        title="Selected engineering work"
+                        desc="Real systems, engineering decisions and implementation evidence. Proprietary repositories remain private; technical walkthroughs are available when authorized."
                     />
 
                     <motion.div
@@ -453,7 +490,7 @@ export default function Page() {
                         <ul className="space-y-3 text-white/80">
                             <li>
                 <span className="font-medium text-white">
-                  CTO / Full-Stack Engineer
+                  CTO / Platform Engineer
                 </span>{" "}
                                 — EnergyWalletNG (Remote)
                             </li>
@@ -464,7 +501,7 @@ export default function Page() {
                                 — Mrock Entertainment / ATHF Kigali (Hybrid)
                             </li>
                             <li>
-                                <span className="font-medium text-white">Fleet Analyst</span> —
+                                <span className="font-medium text-white">Technical Support &amp; Data Analyst (Fleet Operations)</span> —
                                 Dangote Group Plc
                             </li>
                         </ul>
@@ -497,8 +534,8 @@ export default function Page() {
                 <MotionSection id="contact">
                     <SectionTitle
                         kicker="Contact"
-                        title="Let’s talk"
-                        desc="I’m open to high-reliability roles (fintech, gov, enterprise platforms). Private work can be reviewed via guided walkthrough or temporary access when appropriate."
+                        title="Build reliable systems together"
+                        desc="Open to senior backend, platform and applied AI engineering opportunities, including international remote and relocation-supported roles. Private production work can be discussed in an authorized technical walkthrough."
                     />
                     <motion.div
                         variants={fadeUp}
@@ -531,7 +568,7 @@ export default function Page() {
                                     target="_blank"
                                     rel="noreferrer"
                                 >
-                                    linkedin.com/in/emmanuel-maduabuchi-38354315a
+                                    linkedin.com/in/emmanuel-maduabuchi-38354315
                                 </a>
                             </p>
                             <p className="md:col-span-2">
